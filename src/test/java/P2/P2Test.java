@@ -17,8 +17,8 @@ public class P2Test {
     public void testSuaHopLe() {
         SanPham sp = new SanPham("Sp01", "Chung", 20, 7.5f, 2, "sp1");
         service.them(sp);
-        SanPham svMoi = new SanPham("Sp01", "Chung Updated", 22, 8.5f, 4, "sp3");
-        assertTrue(service.sua(svMoi));
+        SanPham spMoi = new SanPham("Sp01", "Chung Updated", 22, 8.5f, 4, "sp3");
+        assertTrue(service.sua(spMoi));
     }
 
     @Test
@@ -31,8 +31,8 @@ public class P2Test {
     public void testSuaTenRong() {
         SanPham sp = new SanPham("Sp01", "Chung", 20, 7.5f, 2, "sp4");
         service.them(sp);
-        SanPham svMoi = new SanPham("Sp01", "", 20, 7.5f, 2, "sp4");
-        assertFalse(service.sua(svMoi));
+        SanPham spMoi = new SanPham("Sp01", "", 20, 7.5f, 2, "sp4");
+        assertFalse(service.sua(spMoi));
     }
 
     @Test

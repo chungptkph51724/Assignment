@@ -10,28 +10,28 @@ public class P1Test {
     ChanLe NumberChecker=new ChanLe();
     @Test
     public void testEvenPositive() {
-        assertEquals("Even", NumberChecker.checkEvenOdd(8));
+        assertEquals("Chan", NumberChecker.checkEvenOdd(8));
     }
 
     @Test
     public void testOddPositive() {
-        assertEquals("Odd", NumberChecker.checkEvenOdd(7));
+        assertEquals("Le", NumberChecker.checkEvenOdd(7));
     }
 
     @Test
     public void testEvenNegative() {
-        assertEquals("Even", NumberChecker.checkEvenOdd(-6));
+        assertEquals("Chan", NumberChecker.checkEvenOdd(6));
     }
 
 
     @Test
     public void testOddNegative() {
-        assertEquals("Odd", NumberChecker.checkEvenOdd(-9));
+        assertEquals("Le", NumberChecker.checkEvenOdd(9));
     }
 
     @Test
-    public void testZero() {
-        assertEquals("Even", NumberChecker.checkEvenOdd(0));
+    public void test() {
+        assertEquals("Chan", NumberChecker.checkEvenOdd(2));
     }
 }
 
