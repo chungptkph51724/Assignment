@@ -16,8 +16,6 @@ public class SavorTest {
 
     WebDriver driver;
     WebDriverWait wait;
-    String testEmail;
-    String testPassword = "password123";
 
     @BeforeEach
     public void setUp() {
@@ -27,28 +25,28 @@ public class SavorTest {
         driver.manage().window().maximize();
     }
 
-//    @Test
-//    public void test01_ThemSanPhamVaoGioHang() {
-//        System.out.println("🔹 Bắt đầu test02_ThemSanPhamVaoGioHang");
-//        driver.get("https://www.savor.vn/");
-//
-//        wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(".product-box")));
-//
-//        WebElement sanPham = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".product-box a.product-thumbnail")));
-//        sanPham.click();
-//
-//        try {
-//            WebElement sizeBtn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".swatch-element input")));
-//            sizeBtn.click();
-//        } catch (Exception ignored) {
-//            System.out.println("⚠️ Không có lựa chọn size.");
-//        }
-//
-//        WebElement btnThem = wait.until(ExpectedConditions.elementToBeClickable(By.id("add-to-cart")));
-//        btnThem.click();
-//
-//        System.out.println("✅ Đã thêm sản phẩm vào giỏ hàng.");
-//    }
+    @Test
+    public void test01_ThemSanPhamVaoGioHang() {
+        System.out.println("🔹 Bắt đầu test02_ThemSanPhamVaoGioHang");
+        driver.get("https://www.savor.vn/");
+
+        wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(".product-box")));
+
+        WebElement sanPham = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".product-box a.product-thumbnail")));
+        sanPham.click();
+
+        try {
+            WebElement sizeBtn = wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector(".swatch-element input")));
+            sizeBtn.click();
+        } catch (Exception ignored) {
+            System.out.println(" Không có lựa chọn size.");
+        }
+
+        WebElement btnThem = wait.until(ExpectedConditions.elementToBeClickable(By.id("add-to-cart")));
+        btnThem.click();
+
+        System.out.println("Đã thêm sản phẩm vào giỏ hàng.");
+    }
 
 
     @AfterEach

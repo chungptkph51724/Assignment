@@ -7,27 +7,31 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 public class P1Test {
-    ChanLe service = new ChanLe();
+    ChanLe NumberChecker=new ChanLe();
     @Test
-    public void test1() {
-        assertEquals(1, service.soLe(1));
+    public void testEvenPositive() {
+        assertEquals("Even", NumberChecker.checkEvenOdd(8));
     }
+
     @Test
-    public void test2() {
-        assertEquals(2, service.soLe(2));
+    public void testOddPositive() {
+        assertEquals("Odd", NumberChecker.checkEvenOdd(7));
     }
+
     @Test
-    public void test3() {
-        assertEquals(3, service.soLe(3));
-    }
-    @Test
-    public void test4() {
-        assertEquals(4, service.soLe(4));
-    }
-    @Test
-    public void test5() {
-        assertEquals(5, service.soLe(5));
+    public void testEvenNegative() {
+        assertEquals("Even", NumberChecker.checkEvenOdd(-6));
     }
 
 
+    @Test
+    public void testOddNegative() {
+        assertEquals("Odd", NumberChecker.checkEvenOdd(-9));
+    }
+
+    @Test
+    public void testZero() {
+        assertEquals("Even", NumberChecker.checkEvenOdd(0));
+    }
 }
+
